@@ -1,0 +1,67 @@
+seed: 123
+
+cudnn_enabled: true
+cudnn_benchmark: false
+cudnn_deterministic: true
+
+exp_dir: exp
+
+device: cuda
+
+use_fp16: false
+use_bf16: false
+
+embed_dim: 1024
+
+f_freeze: true
+b_freeze: true
+
+train_data:
+  wav_scp:
+  text:
+  batch_size: 1
+  num_workers: 1
+  pin_memory: True
+dev_data:
+  wav_scp:
+  text:
+  batch_size: 1
+  num_workers: 1
+  pin_memory: True
+
+stft:
+  n_fft: 512
+  n_hop: 256
+  win_len: 512
+
+# whisper feature relate
+stft1:
+  n_fft: 400
+  n_hop: 160
+  win_len: 400
+feature_size: 80
+target_len: 3000
+
+frcrnnet:
+  win_len: 640
+  win_inc: 320
+  fft_len: 640
+  win_type: hanning
+
+optimizer:
+  lr: 0.001
+
+scheduler:
+  gamma: 0.90
+
+train:
+  epoch: 10
+  grad_clip: 5
+  grad_clip_type: 2
+  accum_grad: 32
+  warmup_step: 0.15
+  log_interval: 15
+  save_checkpoint_interval: 150
+  val_interval: 150
+  val_log_interval: 500
+  keep_nbest_models: 5
