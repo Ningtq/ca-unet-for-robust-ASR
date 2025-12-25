@@ -32,7 +32,7 @@ sing Word Error Rate (WER) as the metric.
 | FRCRN + CA-UNet         | 12.97%          | 8.19%          | 6.49%            |
 | MossformerGAN           | 9.14%           | 6.82%          | 5.64%            |
 | MossformerGAN + OA      | 8.52% (0.2)     | 5.77% (0.1)    | 5.04% (0.1)      |
-| MossformerGAN + CA-UNet | 9.46%           | 7.39%          | 7.30             |
+| MossformerGAN + CA-UNet | 9.46%           | 7.39%          | 7.30%             |
 
 
 
